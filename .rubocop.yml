@@ -20,6 +20,9 @@ Metrics/MethodLength:
 Style/Documentation:
   Enabled: false
 
+Style/EachWithObject:
+  Enabled: false
+
 Style/HashSyntax:
   EnforcedShorthandSyntax: either
 
