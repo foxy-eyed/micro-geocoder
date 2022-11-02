@@ -10,7 +10,7 @@ module Geocoder
       end
 
       def find(city)
-        data[city]
+        data[city.downcase]
       end
 
       private
@@ -22,10 +22,7 @@ module Geocoder
       def load_data!
         @data = CSV.read(@csv, headers: true).inject({}) do |result, row|
           city = row["city"]
-          result[city] = {
-            latitude: row["geo_lat"].to_f,
-            longitude: row["geo_lon"].to_f
-          }
+          result[city.downcase] = { latitude: row["geo_lat"].to_f, longitude: row["geo_lon"].to_f } if city
           result
         end
       end

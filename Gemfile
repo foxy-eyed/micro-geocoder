@@ -11,6 +11,7 @@ gem "rack"
 
 # business logic
 gem "config"
+gem "dry-monads"
 
 # other
 gem "rake"
