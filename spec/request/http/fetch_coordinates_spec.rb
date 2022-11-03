@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe "Fetch coordinates", type: :request do
-  subject(:fetch_coordinates) { post "/v1", **params }
+  subject(:fetch_coordinates) { post "/v1/coordinates", **params }
 
   context "with valid params" do
     let(:params) { { city: "Самара" } }

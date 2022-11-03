@@ -20,7 +20,7 @@ To change the port edit file `config/settings.yml`.
 
 ## Endpoints
 ```
-POST http://localhost:3000/v1/
+POST http://localhost:3000/v1/coordinates
 
 PARAMS
 {
