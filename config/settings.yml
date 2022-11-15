@@ -1,2 +1,6 @@
+ads:
+  url: http://localhost:9292
 app:
   port: 3000
+rabbit_mq:
+  consumer_pool: 10
