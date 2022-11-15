@@ -8,8 +8,11 @@ module Core
 
     def connection
       @mutex.synchronize do
-        @connection ||= Bunny.new.start
+        @connection ||= Bunny.new
+        @connection.start
       end
+    rescue Errno::ECONNRESET
+      @connection.start
     end
 
     def channel
