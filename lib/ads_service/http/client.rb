@@ -2,6 +2,8 @@
 
 module AdsService
   module HTTP
+    class Error < StandardError; end
+
     class Client
       include API
 
@@ -15,11 +17,11 @@ module AdsService
         response = connection.send(verb, path, params)
         status = response.status
         body = response.body
-        raise AdsService::Error, "[Ads]: #{status} — #{body}" unless status == 200
+        raise Error, "[Ads]: #{status} — #{body}" unless status == 200
 
         body
       rescue Faraday::Error => e
-        raise AdsService::Error, "[Ads]: #{e.message}"
+        raise Error, "[Ads]: #{e.message}"
       end
 
       private
