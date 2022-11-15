@@ -24,20 +24,15 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    services:
-      rabbitmq:
-        image: rabbitmq:3.8-management
-        env:
-          RABBITMQ_DEFAULT_USER: guest
-          RABBITMQ_DEFAULT_PASS: guest
-        ports:
-          - 5672:5672
-
     env:
       RACK_ENV: test
 
     steps:
       - uses: actions/checkout@v2
+
+      - uses: mer-team/rabbitmq-mng-action@v1.2
+        with:
+          RABBITMQ_TAG: '3-management'
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
