@@ -17,6 +17,8 @@ gem "config"
 gem "dry-monads"
 
 # other
+gem "rack-ougai"
+gem "rack-request-id"
 gem "rake"
 
 group :test, :development do
