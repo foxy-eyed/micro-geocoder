@@ -1,0 +1,5 @@
+logger:
+  level: error
+  log_path: log/test.log
+rabbit_mq:
+  consumer_pool: 1

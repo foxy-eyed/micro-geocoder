@@ -10,15 +10,16 @@ Geocoder microservice.
 bundle install
 ```
 
-## To run the app
+## HTTP
+### To run the app
 ```
-bin/app
+bin/http
 ```
 The app is running by default at `http://localhost:3000`.
 
 To change the port edit file `config/settings.yml`.
 
-## Endpoints
+### Endpoints
 ```
 POST http://localhost:3000/v1/coordinates
 
@@ -52,8 +53,13 @@ OR
   ]
 }
 ```
+## RPC
+### To run the app
+```
+bin/rpc
+```
 
-### To run tests
+## To run tests
 ```
 bundle exec rspec
 ```

@@ -1,2 +1,10 @@
+ads:
+  url: http://localhost:9292
 app:
+  name: geocoder
   port: 3000
+logger:
+  level: info
+  log_path: log/app.log
+rabbit_mq:
+  consumer_pool: 10
