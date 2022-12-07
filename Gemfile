@@ -17,9 +17,12 @@ gem "config"
 gem "dry-monads"
 
 # other
+gem "rack-ougai"
+gem "rack-request-id"
 gem "rake"
 
 group :test, :development do
+  gem "amazing_print"
   gem "rubocop", require: false
   gem "rubocop-rspec"
 end
